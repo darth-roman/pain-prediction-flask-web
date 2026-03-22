@@ -33,7 +33,6 @@ def predict():
 
     EDA_MEAN = 2.89
 
-
     features = np.array([[
         EDA_MEAN,
         float(data["bvp"]),
