@@ -1,13 +1,15 @@
 from flask import Flask, request, jsonify, render_template, url_for
+from flask_cors import CORS
 import joblib
 import numpy as np
 
 app = Flask(__name__)
+CORS(app)
 
 model = joblib.load("model.pkl")
 scaler = joblib.load("scaler.pkl")
 
-url_for('static', filename='style.css')
+# url_for('static', filename='style.css')
 
 PAIN_LEVELS = {
     1: "Minimal",
@@ -31,12 +33,10 @@ PAIN_LEVELS = {
 def predict():
     data = request.get_json()
 
-    EDA_MEAN = 2.89
-
     features = np.array([[
-        EDA_MEAN,
+        float(data["eda"]),
         float(data["bvp"]),
-        float(data["heart_rate"]),
+        float(data["hr"]),
         float(data["temp"]),
     ]])
 
