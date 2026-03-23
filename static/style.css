@@ -61,6 +61,13 @@ main{
         align-items: center;
         gap: 1rem;
 
+         span{
+            display: block;
+            background-color: var(--caution);
+            width: fit-content;
+            padding: 0.2rem;
+        }
+
         .field{
             width: 100%;
 
@@ -154,12 +161,6 @@ footer{
         form{
             width: 100%;
 
-            span{
-                display: block;
-                background-color: var(--caution);
-                width: fit-content;
-                padding: 0.2rem;
-            }
         }
 
         #result{
