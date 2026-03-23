@@ -4,7 +4,7 @@ import joblib
 import numpy as np
 
 app = Flask(__name__)
-CORS(app, origins=["https://darth-roman.github.io"], supports_credentials=True)
+CORS(app, origins=["https://darth-roman.github.io"], methods=["GET", "POST", "OPTIONS"], supports_credentials=True,  allow_headers=["Content-Type", "Authorization"])
 
 model = joblib.load("model.pkl")
 scaler = joblib.load("scaler.pkl")
