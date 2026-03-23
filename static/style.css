@@ -16,6 +16,7 @@
     --text-dark: hsl(0, 2%, 10%);
     --btn-bg-primary: hsl(120, 86%, 17%);
     --result-bg: hsla(233, 49%, 25%, 0.704);
+    --caution: hsla(0, 90%, 51%, 0.704);
     --btn-bg-secondary: hsl(67, 100%, 66%);
 }
 
@@ -145,13 +146,20 @@ footer{
         flex-direction: column;
         align-items: center;
 
-        margin: 3rem 0rem;
+        margin: 2rem 0rem;
 
     }
     
     main{
         form{
             width: 100%;
+
+            span{
+                display: block;
+                background-color: var(--caution);
+                width: fit-content;
+                padding: 0.2rem;
+            }
         }
 
         #result{

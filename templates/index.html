@@ -17,19 +17,22 @@
     <main>
         <form>
             <div class="field">
-                <label>EDA</label>
+                <label for="eda">Ectodermal Activity</label>
+                <small>Galvanic Skin Response<span>min: 0.05, max: 9.87</span></small>
                 <input type="text" name="eda" id="eda">
             </div>
             <div class="field">
-                <label>BVP</label>
+                <label for="bvp">Blood Volume Pulse</label>
+                <small><span>min: 40.00, max: 130.00</span></small>
                 <input type="text" name="bvp" id="bvp">
             </div>
             <div class="field">
-                <label>HR</label>
+                <label for="hr">Heart Rate</label>
+                <small><span>min: 50.00, max: 110.00</span></small>
                 <input type="text" name="hr" id="hr">
             </div>
             <div class="field">
-                <label>Temp</label>
+                <label for="temp">Temperature</label>
                 <input type="text" name="temp" id="temp">
             </div>
             <button type="submit">Predict</button>
