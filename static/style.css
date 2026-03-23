@@ -34,6 +34,16 @@ body{
 
 header{
     margin: 5rem 0rem;
+
+    h1{
+        display: inline;
+        &:nth-child(2){
+            background-color: var(--btn-bg-secondary);
+            color: var(--text-dark);
+            padding: 0.2rem;
+        }
+
+    }
 }
 
 main{
@@ -119,10 +129,43 @@ main{
 }
 
 footer{
-    position: fixed;
+    position: absolute;
     bottom: 0;
+    margin: 2rem 0;
 
-    p{
-        margin: 2rem 0;
+    span{
+        background-color: var(--btn-bg-secondary);
+        color: var(--text-dark);
     }
+}
+
+@media (width < 400px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin: 3rem 0rem;
+
+    }
+    
+    main{
+        form{
+            width: 100%;
+        }
+
+        #result{
+            width: 100%;
+
+            h3{
+                font-size: 1rem;
+            }
+        }
+    }
+
+    footer{
+        position: relative;
+        margin: 1rem 0rem;
+    }
+    
 }

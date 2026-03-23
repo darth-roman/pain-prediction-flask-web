@@ -12,7 +12,9 @@ submitBtn.addEventListener("click", async (e)=>{
 
     renderResults(prediction)
 
-    console.log(prediction);
+    console.log("Hello there, if you see this, it means you are in the console, snipping for some console.log voodoo");
+    console.log("Congrats, you wasted your time, my bytes are glad you took a look tho");
+    
 })
 
 async function fetchPrediction(){
