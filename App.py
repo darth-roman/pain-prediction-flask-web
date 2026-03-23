@@ -4,8 +4,7 @@ import joblib
 import numpy as np
 
 app = Flask(__name__)
-CORS(app, origins=["https://darth-roman.github.io"], methods=["GET", "POST", "OPTIONS"], supports_credentials=True,  allow_headers=["Content-Type", "Authorization"])
-# CORS(app, origins="*")
+CORS(app)
 
 model = joblib.load("model.pkl")
 scaler = joblib.load("scaler.pkl")
@@ -24,9 +23,9 @@ PAIN_LEVELS = {
 }
 
 
-# @app.route("/")
-# def index():
-#     return render_template("index.html")
+@app.route("/")
+def index():
+    return render_template("index.html")
 
 @app.route("/predict", methods=["POST"])
 def predict():

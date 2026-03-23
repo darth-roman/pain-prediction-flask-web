@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pain Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='main.js') }}" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Predict Your Speechless Patient Pain</h1>
+    </header>
+
+    <main>
+        <form>
+            <div class="field">
+                <label>EDA</label>
+                <input type="text" name="eda" id="eda">
+            </div>
+            <div class="field">
+                <label>BVP</label>
+                <input type="text" name="bvp" id="bvp">
+            </div>
+            <div class="field">
+                <label>HR</label>
+                <input type="text" name="hr" id="hr">
+            </div>
+            <div class="field">
+                <label>Temp</label>
+                <input type="text" name="temp" id="temp">
+            </div>
+            <button type="submit">Predict</button>
+        </form>
+
+        <section id="result">
+            <h3>Fill the form and hit predict to start</h3>
+            <h4>Your patient's pain scale</h4>
+            <p id="pain-scale">6</p>
+            <p id="pain-label">Severe</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Roman</p>
+    </footer>
+</body>
+</html>
