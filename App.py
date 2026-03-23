@@ -4,12 +4,10 @@ import joblib
 import numpy as np
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins="https://darth-roman.github.io/pain-prediction-frontend/")
 
 model = joblib.load("model.pkl")
 scaler = joblib.load("scaler.pkl")
-
-# url_for('static', filename='style.css')
 
 PAIN_LEVELS = {
     1: "Minimal",
@@ -54,4 +52,4 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run(debug=False, host="localhost", port=5050)
+    app.run(debug=False)
